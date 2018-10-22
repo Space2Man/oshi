@@ -175,6 +175,8 @@ public class MacFileSystem implements FileSystem {
                 osStore.setUUID(uuid);
                 osStore.setUsableSpace(file.getUsableSpace());
                 osStore.setTotalSpace(file.getTotalSpace());
+                osStore.setFreeInodes(fs[f].f_ffree);
+                osStore.setTotalInodes(fs[f].f_files);
                 fsList.add(osStore);
             }
         }
